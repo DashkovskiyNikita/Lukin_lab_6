@@ -3,8 +3,11 @@ using namespace std;
 
 struct Student {
     int grades[5];
-};
 
+    void print_info() {
+        cout << "print info ...";
+    }
+};
 
 bool check_grade(const int* const grades, const int size) {
     bool isPositive = true;
@@ -33,7 +36,7 @@ int main()
         bool check = check_grade(grades, 5);
         if (check) {
             isPresent = true;
-            print_info();
+            student.print_info();
         }
     }
     if (!isPresent) cout << "There are no students who meet these conditions" << endl;
